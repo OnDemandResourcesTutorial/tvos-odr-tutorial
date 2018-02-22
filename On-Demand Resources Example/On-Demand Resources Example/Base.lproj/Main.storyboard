@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VA2-ZV-e46">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu Table View Controller-->
+        <scene sceneID="dRo-cG-AuT">
+            <objects>
+                <tableViewController id="5dM-32-U2N" customClass="MenuTableViewController" customModule="On_Demand_Resources_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" id="onT-GR-4q7">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="OZ3-CA-3SN" customClass="MenuCell" customModule="On_Demand_Resources_Example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="66" width="1700" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OZ3-CA-3SN" id="ar0-4e-0kX">
+                                    <rect key="frame" x="0.0" y="0.0" width="1700" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Downloaded" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0W-Md-cYG">
+                                            <rect key="frame" x="1264" y="0.0" width="286" height="66"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="93" id="yhJ-VI-Obv"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4j3-3Q-xlP">
+                                            <rect key="frame" x="1380" y="23" width="150" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="1gG-kG-Oia"/>
+                                            </constraints>
+                                        </progressView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="e0W-Md-cYG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ar0-4e-0kX" secondAttribute="leading" id="DQ2-Ju-Hnu"/>
+                                        <constraint firstAttribute="bottom" secondItem="e0W-Md-cYG" secondAttribute="bottom" id="GS5-TY-wJL"/>
+                                        <constraint firstItem="e0W-Md-cYG" firstAttribute="top" secondItem="ar0-4e-0kX" secondAttribute="top" id="ORl-HB-eDM"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4j3-3Q-xlP" secondAttribute="trailing" constant="150" id="eNa-kM-IkM"/>
+                                        <constraint firstAttribute="trailing" secondItem="e0W-Md-cYG" secondAttribute="trailing" constant="150" id="fIr-rL-vNQ"/>
+                                        <constraint firstItem="4j3-3Q-xlP" firstAttribute="top" secondItem="ar0-4e-0kX" secondAttribute="topMargin" id="gq7-rl-09g"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4j3-3Q-xlP" secondAttribute="bottom" id="oIh-13-Tlw"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="isDownloaded" destination="e0W-Md-cYG" id="ZTM-3g-nYc"/>
+                                    <outlet property="progressView" destination="4j3-3Q-xlP" id="4RU-yQ-nu8"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5dM-32-U2N" id="8HG-BI-xbK"/>
+                            <outlet property="delegate" destination="5dM-32-U2N" id="BgT-Yl-HHC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1tu-9S-AqF"/>
+                    <connections>
+                        <segue destination="anE-ML-kOh" kind="show" identifier="ClickedSegue" id="iCy-aC-nJz">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xvP-jD-Zi2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50" y="-89"/>
+        </scene>
+        <!--Celebrity View Controller-->
+        <scene sceneID="YHJ-E3-snQ">
+            <objects>
+                <viewController id="anE-ML-kOh" customClass="CelebrityViewController" customModule="On_Demand_Resources_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aNs-T9-4BP"/>
+                        <viewControllerLayoutGuide type="bottom" id="w4U-iY-Ll4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ewT-72-WH5">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Zac Efron" translatesAutoresizingMaskIntoConstraints="NO" id="N1c-ZX-4HT">
+                                <rect key="frame" x="90" y="145" width="1740" height="875"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="N1c-ZX-4HT" firstAttribute="top" secondItem="aNs-T9-4BP" secondAttribute="bottom" id="hwB-wm-lhS"/>
+                            <constraint firstItem="u6a-ex-2O6" firstAttribute="trailing" secondItem="N1c-ZX-4HT" secondAttribute="trailing" id="jLI-Uo-Uu4"/>
+                            <constraint firstItem="w4U-iY-Ll4" firstAttribute="top" secondItem="N1c-ZX-4HT" secondAttribute="bottom" id="l4e-iO-Rvj"/>
+                            <constraint firstItem="N1c-ZX-4HT" firstAttribute="leading" secondItem="u6a-ex-2O6" secondAttribute="leading" id="mTi-f9-Fwm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u6a-ex-2O6"/>
+                    </view>
+                    <connections>
+                        <outlet property="celebrityImage" destination="N1c-ZX-4HT" id="b2N-jP-l28"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iwi-sT-4Mu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2269" y="-90"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pze-Jn-1fB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VA2-ZV-e46" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ODs-Ue-ql6">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5dM-32-U2N" kind="relationship" relationship="rootViewController" id="cyf-kR-jCC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yYk-xQ-vqc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2188" y="-89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Zac Efron" width="246" height="205"/>
+    </resources>
+</document>
