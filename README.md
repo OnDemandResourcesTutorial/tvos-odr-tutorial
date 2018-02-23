@@ -7,9 +7,8 @@ Descrição
   Nesse projeto podem ser adquiridos os seguintes conhecimentos sobre o tópico:
 	* Tags
 	* Tag Types
-	* Prioridade de download do resource
-	* Prioridade de preservação do resource
-	* Eliminação de ODRs
+	* Requisição de assets
+	* Tratamento de erros
 
 Instalação
 ----------
