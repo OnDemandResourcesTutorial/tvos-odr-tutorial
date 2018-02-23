@@ -17,14 +17,12 @@ Descrição
 Uso
 ----------
 Os assets que não são necessários no download base do aplicativo podem ser programados para serem baixados em outro momento atribuindo tags à eles. Para fazer isso deve-se acessar a aba *Resource Tags* no projeto e atribuir tags aos assets.
+
 ![](/Screenshots/Screen1.png)
+
 E através desse método é possível requisitar o(s) asset(s): 
 `func requestImage(with tag: String, onSuccess: @escaping () -> Void, onFailure: @escaping (NSError) -> Void)`
+
 Na imagem abaixo é possível ver os assets requisitados sendo baixados no app de exemplo:
+
 ![](/Screenshots/Screen3.png)
-
-Créditos
---------
-
-Licença
---------
