@@ -10,11 +10,12 @@ Descrição
 	* Requisição de assets
 	* Tratamento de erros
 
-Instalação
-----------
 
 Uso
 ----------
+![](/Screenshots/Screen1.png)
+![](/Screenshots/Screen2.png)
+![](/Screenshots/Screen3.png)
 
 Créditos
 --------
